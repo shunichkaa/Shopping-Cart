@@ -85,6 +85,6 @@ const products = [
   },
 ];
 
-products.forEach(
-  () => {}
-);
+products.forEach(({ name, id, price, category }) => {
+
+});
