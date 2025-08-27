@@ -82,5 +82,9 @@ const products = [
     name: "Lemon Cupcakes (4 Pack)",
     price: 12.99,
     category: "Cupcake",
-  }
+  },
 ];
+
+products.forEach(
+  () => {}
+);
