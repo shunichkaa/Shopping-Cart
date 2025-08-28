@@ -85,6 +85,14 @@ const products = [
   },
 ];
 
-products.forEach(({ name, id, price, category }) => {
+dessertCards.innerHTML += ``;
 
+products.forEach(({ name, id, price, category }) => {
+  dessertCards.innerHTML += `
+    <div class="card" id="${id}">
+      <h3>${name}</h3>
+      <p>Category: ${category}</p>
+      <p>Price: $${price}</p>
+    </div>
+  `;
 });
