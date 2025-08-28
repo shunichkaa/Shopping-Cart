@@ -101,3 +101,4 @@ products.forEach(
   }
 );
 
+class ShoppingCart {};
