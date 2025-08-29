@@ -109,6 +109,12 @@ class ShoppingCart {
   }
 
 addItem(id, products) {
-  const product = products.find(item => item.id === id);
+  const product = products.find((item) => item.id === id);
+  if (!product) return;
+
+  const { name, price } = product;
+
+  // теперь можно использовать name и price
+  console.log(name, price);
 }
 };
