@@ -116,5 +116,7 @@ addItem(id, products) {
   this.items.push(product);
 
   const totalCountPerProduct = {};
+
+  this.items.forEach((dessert) => {});
 }
 };
