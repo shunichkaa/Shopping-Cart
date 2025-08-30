@@ -123,6 +123,11 @@ addItem(id, products) {
 
   currentProductCount > 1 
     ? currentProductCountSpan.textContent = `${currentProductCount}x`
-    : productsContainer.innerHTML += `<div class="product" id="dessert${id}"></div>`;
+    : productsContainer.innerHTML += `
+      <div id="dessert${id}" class="product">
+        <p>${name}</p>
+        <p>${price}</p>
+      </div>
+    `;
 }
 };
