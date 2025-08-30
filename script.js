@@ -125,7 +125,7 @@ addItem(id, products) {
     ? currentProductCountSpan.textContent = `${currentProductCount}x`
     : productsContainer.innerHTML += `
       <div id="dessert${id}" class="product">
-        <p>${name}</p>
+        <p><span class="product-count" id="product-count-for-id${id}"></span> ${name}</p>
         <p>${price}</p>
       </div>
     `;
