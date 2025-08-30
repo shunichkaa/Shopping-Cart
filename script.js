@@ -119,5 +119,6 @@ addItem(id, products) {
   });
 
   const currentProductCount = totalCountPerProduct[product.id];
+  const currentProductCountSpan = document.getElementById(`product-count-for-id${product.id}`);
 }
 };
