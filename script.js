@@ -136,18 +136,24 @@ class ShoppingCart {
   getCounts() {
     return this.items.length;
   }
+
+  calculateTotal() {
+    const subTotal = this.items.reduce((total, item) => total + item.price, 0);
+    return subTotal;
+  }
 };
 
 const cart = new ShoppingCart();
 const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
-[...addToCartBtns].forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    cart.addItem(Number(event.target.id), products);
-    totalNumberOfItems.textContent = cart.getCounts();
-  });
-});
-
+[...addToCartBtns].forEach(
+  (btn) => {
+    btn.addEventListener("click", (event) => {
+      cart.addItem(Number(event.target.id), products);
+      totalNumberOfItems.textContent = cart.getCounts();
+    })
+  }
+);
 
 cartBtn.addEventListener("click", () => {
   isCartShowing = !isCartShowing;
