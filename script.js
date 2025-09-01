@@ -143,13 +143,7 @@ clearCart() {
     return;
   }
 
-  this.items = [];
-  this.total = 0;
-  productsContainer.innerHTML = '';
-  totalNumberOfItems.textContent = '0';
-  cartSubTotal.textContent = '$0.00';
-  cartTaxes.textContent = '$0.00';
-  cartTotal.textContent = '$0.00';
+  const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
 }
 
   calculateTaxes(amount) {
