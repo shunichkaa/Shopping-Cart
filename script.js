@@ -137,9 +137,20 @@ class ShoppingCart {
     return this.items.length;
   }
 
-  clearCart() {
-
+clearCart() {
+  if (!this.items.length) {
+    alert("Your shopping cart is already empty");
+    return;
   }
+
+  this.items = [];
+  this.total = 0;
+  productsContainer.innerHTML = '';
+  totalNumberOfItems.textContent = '0';
+  cartSubTotal.textContent = '$0.00';
+  cartTaxes.textContent = '$0.00';
+  cartTotal.textContent = '$0.00';
+}
 
   calculateTaxes(amount) {
     return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
