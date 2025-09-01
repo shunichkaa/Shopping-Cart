@@ -137,6 +137,10 @@ class ShoppingCart {
     return this.items.length;
   }
 
+  clearCart() {
+
+  }
+
   calculateTaxes(amount) {
     return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
   }
@@ -161,7 +165,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
       cart.addItem(Number(event.target.id), products);
       totalNumberOfItems.textContent = cart.getCounts();
       cart.calculateTotal();
-    });
+    })
   }
 );
 
